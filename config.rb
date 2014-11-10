@@ -1,10 +1,3 @@
-# ========================================================================
-# Hello Jason
-# http://hellojason.net
-# ========================================================================
-
-# Copy ./source/environment_variables.example to ./source/environment_variables.rb
-# then update settings there.
 require "./source/environment_variables.rb"
 
 # ========================================================================
@@ -33,6 +26,17 @@ activate :bourbon
 # for referenceing your pages.
 set :url_home,              "/"
 
+# ========================================================================
+# Deployment
+# ========================================================================
+
+activate :deploy do |deploy|
+  deploy.method = :git
+  deploy.remote = 'https://github.com/gyardley/gyardley.github.io.git'
+  deploy.branch = 'master' # default: gh-pages
+  # deploy.strategy = :submodule      # commit strategy: can be :force_push or :submodule, default: :force_push
+  # deploy.commit_message = 'custom-message'      # commit message (can be empty), default: Automated commit at `timestamp` by middleman-deploy `version`
+end
 
 # ========================================================================
 # Page options, layouts, aliases and proxies

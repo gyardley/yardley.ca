@@ -16,3 +16,6 @@ gem "middleman-imageoptim", "~> 0.1.4"
 
 # added for development easiness
 gem "middleman-livereload", "~> 3.1.0"
+
+# deploying
+gem 'middleman-deploy', '~> 0.3.0'
