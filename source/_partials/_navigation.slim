@@ -1,0 +1,16 @@
+nav.navbar.navbar-default.visible-xs-block
+  .container-fluid
+    .navbar-center.navbar-brand
+      a.navbar-brand href="#{site_url}" title="#{site_title}" #{site_title}
+    .navbar-header
+      button.navbar-toggle data-target="#primary-navigation" data-toggle="collapse" type="button"
+        span.sr-only
+          | Toggle navigation
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+    .collapse.navbar-collapse#primary-navigation
+      ul.nav.navbar-nav
+        li.nav-hello
+          a href="#{site_url}" Home
+
