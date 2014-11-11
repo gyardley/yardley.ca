@@ -46,7 +46,15 @@ end
 #
 # With no layout
 # page "/path/to/file.html", :layout => false
-#
+
+page "/" do
+  @sidebar = "sidebar"
+end
+
+page "/404.html" do
+  @sidebar = "sidebar_404"
+end
+
 # With alternative layout
 # page "/path/to/file.html", :layout => :otherlayout
 #
